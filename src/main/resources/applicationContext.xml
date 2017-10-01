@@ -4,8 +4,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean name="driverRepository" class="be.quentinloos.repository.DriverRepositoryImpl" />
-    <bean name="fleetService" class="be.quentinloos.service.FleetServiceImpl">
-        <constructor-arg name="driverRepository" ref="driverRepository" />
-    </bean>
+    <bean name="fleetService" class="be.quentinloos.service.FleetServiceImpl" autowire="constructor" />
 
 </beans>
