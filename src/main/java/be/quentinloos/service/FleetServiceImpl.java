@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service("fleetService")
+@Service
 public class FleetServiceImpl implements FleetService {
 
   private DriverRepository driverRepository;

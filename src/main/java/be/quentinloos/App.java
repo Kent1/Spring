@@ -13,7 +13,7 @@ public class App {
 //    FleetService fleetService = new FleetServiceImpl(driverRepository);
 
     ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
-    FleetService fleetService = applicationContext.getBean("fleetService", FleetService.class);
+    FleetService fleetService = applicationContext.getBean(FleetService.class);
     fleetService.getAllDrivers().forEach(System.out::println);
   }
 }
