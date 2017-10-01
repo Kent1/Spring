@@ -2,10 +2,12 @@ package be.quentinloos.repository;
 
 import be.quentinloos.model.Car;
 import be.quentinloos.model.Driver;
+import org.springframework.stereotype.Repository;
 
 import java.util.Collections;
 import java.util.List;
 
+@Repository
 public class DriverRepositoryImpl implements DriverRepository {
 
   private static Driver driver;
