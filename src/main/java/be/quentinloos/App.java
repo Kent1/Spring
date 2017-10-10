@@ -14,6 +14,7 @@ public class App {
 
     ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
     FleetService fleetService = applicationContext.getBean(FleetService.class);
+    fleetService.displayGreeting();
     fleetService.getAllDrivers().forEach(System.out::println);
   }
 }
