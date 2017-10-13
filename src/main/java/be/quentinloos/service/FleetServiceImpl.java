@@ -26,8 +26,8 @@ public class FleetServiceImpl implements FleetService {
   }
 
   @Override
-  public void displayGreeting() {
-    System.out.println(greeting);
+  public String getGreeting() {
+    return greeting;
   }
 
 }

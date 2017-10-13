@@ -8,5 +8,5 @@ public interface FleetService {
 
   List<Driver> getAllDrivers();
 
-  void displayGreeting();
+  String getGreeting();
 }
