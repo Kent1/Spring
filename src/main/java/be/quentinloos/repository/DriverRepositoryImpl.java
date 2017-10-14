@@ -13,6 +13,11 @@ public class DriverRepositoryImpl implements DriverRepository {
   List<Driver> drivers;
 
   @Override
+  public void addDriver(Driver driver) {
+    drivers.add(driver);
+  }
+
+  @Override
   public List<Driver> getAllDrivers() {
     return drivers;
   }

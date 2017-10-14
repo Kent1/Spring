@@ -8,5 +8,7 @@ public interface FleetService {
 
   List<Driver> getAllDrivers();
 
+  void addDriver(Driver driver);
+
   String getGreeting();
 }

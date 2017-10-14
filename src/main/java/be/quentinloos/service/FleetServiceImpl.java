@@ -25,6 +25,10 @@ public class FleetServiceImpl implements FleetService {
     return driverRepository.getAllDrivers();
   }
 
+  public void addDriver(Driver driver) {
+    driverRepository.addDriver(driver);
+  }
+
   @Override
   public String getGreeting() {
     return greeting;

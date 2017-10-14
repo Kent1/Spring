@@ -8,4 +8,6 @@ public interface DriverRepository {
 
   List<Driver> getAllDrivers();
 
+  void addDriver(Driver driver);
+
 }
