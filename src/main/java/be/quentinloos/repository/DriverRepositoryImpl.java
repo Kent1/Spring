@@ -1,31 +1,20 @@
 package be.quentinloos.repository;
 
-import be.quentinloos.model.Car;
 import be.quentinloos.model.Driver;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import java.util.Collections;
 import java.util.List;
 
 @Repository
 public class DriverRepositoryImpl implements DriverRepository {
 
-  private static Driver driver;
+  @Autowired
+  List<Driver> drivers;
 
-  static {
-    Car car = new Car();
-    car.setBrand("Mercedes");
-    car.setModel("Class A");
-    car.setVersion("180");
-    car.setPlateNumber("1-ABC-123");
-
-    driver = new Driver();
-    driver.setFirstname("Jeremy");
-    driver.setLastname("Schmidt");
-    driver.setCar(car);
-  }
-
+  @Override
   public List<Driver> getAllDrivers() {
-    return Collections.singletonList(driver);
+    return drivers;
   }
+
 }
