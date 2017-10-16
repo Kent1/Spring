@@ -32,6 +32,11 @@ public class FleetController {
     return fleetService.getAllDriversByBrand(brand);
   }
 
+  @RequestMapping("/drivers/firstname/{firstname}")
+  public List<Driver> getAllDriversByFirstname(@PathVariable("firstname") String firstname) {
+    return fleetService.getAllDriversByFirstname(firstname);
+  }
+
   @RequestMapping(value = "/drivers", method = RequestMethod.POST)
   public void addDriver(@RequestBody Driver driver) {
     fleetService.addDriver(driver);

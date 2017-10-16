@@ -37,6 +37,11 @@ public class FleetServiceImpl implements FleetService {
   }
 
   @Override
+  public List<Driver> getAllDriversByFirstname(String firstname) {
+    return driverRepository.findByDriverFirstname(firstname);
+  }
+
+  @Override
   public String getGreeting() {
     return greeting;
   }

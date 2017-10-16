@@ -10,6 +10,8 @@ public interface FleetService {
 
   List<Driver> getAllDriversByBrand(String brand);
 
+  List<Driver> getAllDriversByFirstname(String firstname);
+
   void addDriver(Driver driver);
 
   String getGreeting();
