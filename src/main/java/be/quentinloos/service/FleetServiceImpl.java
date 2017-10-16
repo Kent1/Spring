@@ -32,6 +32,11 @@ public class FleetServiceImpl implements FleetService {
   }
 
   @Override
+  public List<Driver> getAllDriversByBrand(String brand) {
+    return driverRepository.findAllByCar_Brand(brand);
+  }
+
+  @Override
   public String getGreeting() {
     return greeting;
   }

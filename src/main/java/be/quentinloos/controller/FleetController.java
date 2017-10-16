@@ -3,10 +3,7 @@ package be.quentinloos.controller;
 import be.quentinloos.entity.Driver;
 import be.quentinloos.service.FleetService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,6 +25,11 @@ public class FleetController {
   @RequestMapping("/drivers")
   public List<Driver> getAllDrivers() {
     return fleetService.getAllDrivers();
+  }
+
+  @RequestMapping("/drivers/brand/{brand}")
+  public List<Driver> getAllDriversByBrand(@PathVariable("brand") String brand) {
+    return fleetService.getAllDriversByBrand(brand);
   }
 
   @RequestMapping(value = "/drivers", method = RequestMethod.POST)
