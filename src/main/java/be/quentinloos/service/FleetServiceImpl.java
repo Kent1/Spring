@@ -23,12 +23,12 @@ public class FleetServiceImpl implements FleetService {
   }
 
   public List<Driver> getAllDrivers() {
-    return driverRepository.getAllDrivers();
+    return driverRepository.findAll();
   }
 
   @Transactional
   public void addDriver(Driver driver) {
-    driverRepository.addDriver(driver);
+    driverRepository.save(driver);
   }
 
   @Override

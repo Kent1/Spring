@@ -1,13 +1,7 @@
 package be.quentinloos.repository;
 
 import be.quentinloos.entity.Driver;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
-
-public interface DriverRepository {
-
-  List<Driver> getAllDrivers();
-
-  void addDriver(Driver driver);
-
+public interface DriverRepository extends JpaRepository<Driver, Long> {
 }
