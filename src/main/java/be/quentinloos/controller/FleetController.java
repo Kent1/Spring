@@ -1,6 +1,6 @@
 package be.quentinloos.controller;
 
-import be.quentinloos.model.Driver;
+import be.quentinloos.entity.Driver;
 import be.quentinloos.service.FleetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;

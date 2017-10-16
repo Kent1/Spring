@@ -1,6 +1,6 @@
 package be.quentinloos.service;
 
-import be.quentinloos.model.Driver;
+import be.quentinloos.entity.Driver;
 
 import java.util.List;
 
